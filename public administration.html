@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>लोक प्रशासन</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8f9fa;
+        }
+        header {
+            background: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .admin-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            position: relative;
+        }
+        .admin-section h2, .admin-section h3 {
+            margin-top: 20px;
+            color: #343a40;
+        }
+        .admin-section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .sub-section {
+            margin-top: 20px;
+        }
+		
+		.google {
+
+				text-align:center;
+				border: 5px solid black;
+				background-color: #FFCC66;
+				 box-shadow: 10px 10px #CC9900;
+
+				 }
+				 .navbar .nav-link:hover {
+				            background-image: linear-gradient(
+				   to right,
+				   orange,
+				   red 50%,
+				 yellow 50%
+				 );
+				 background-size: 200% 100%;
+				 background-position: -100%;
+				 -webkit-background-clip: text;
+				 -webkit-text-fill-color: transparent;
+				 transition: all 2s ease-in-out;
+				       }
+					   .custom-navbar {
+					     background-color: #1a1a1a; /* Dark background color */
+					   }
+
+					   .custom-navbar .nav-link,
+					   .custom-navbar .navbar-toggler-icon,
+					   .custom-navbar .btn-danger {
+					     color: #f8f9fa; /* Light text color for good contrast */
+					   }
+
+					   .custom-navbar .dropdown-menu {
+					     background-color: #1a1a1a; /* Match the background color */
+					   }
+
+					   .custom-navbar .dropdown-item {
+					     color: #f8f9fa; /* Light text color */
+					   }
+
+					   .custom-navbar .dropdown-item:hover {
+					     background-color: #343a40; /* Slightly lighter color on hover */
+					   }
+		    </style>
+		</head>
+		<body>
+			
+		    <div class="container"><br> <br>
+			<br>
+		        <header class="text-center my-4">
+		            <h1> लोक प्रशासन </h1>
+		        </header>
+			
+				<div class="google" id="google_translate_element"></div>
+				<script type="text/javascript">
+				function googleTranslateElementInit() {
+				  new google.translate.TranslateElement({pageLanguage: 'hindi'}, 'google_translate_element');
+				}
+				</script>
+
+				<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+				<div class="container">
+					<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+								  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+								    <span class="navbar-toggler-icon"></span>
+								  </button>
+								  <div class="collapse navbar-collapse" id="navbarNav">
+								    <div class="container col-md-1">
+								      <a class="nav-link" href="history.html" th:href="@{/history}">History</a>
+								    </div>
+								    <div class="container col-md-1">
+								      <a class="nav-link" href="polity.html" th:href="@{/polity}">Polity</a>
+								    </div>
+								    <div class="container col-md-1">
+								      <a class="nav-link" href="/src/main/resources/templates/ReadMore/hindi.html" th:href="@{/hindi}">Hindi</a>
+								    </div>
+								    <div class="container col-md-1">
+								      <a class="nav-link" href="/src/main/resources/templates/ReadMore/economics.html" th:href="@{/economics}">Economics</a>
+								    </div>
+								    <div class="container col-md-2">
+								      <a class="nav-link" href="/src/main/resources/templates/ReadMore/public administration.html" th:href="@{/public administration}">Public administration</a>
+								    </div>
+								    <div class="container col-md-1">
+								      <a class="nav-link" href="/src/main/resources/templates/ReadMore/chemistry.html" th:href="@{/chemistry}">Chemistry</a>
+								    </div>
+								    <div class="container col-md-1">
+								      <a class="nav-link" href="/src/main/resources/templates/ReadMore/physics.html" th:href="@{/physics}">Physics</a>
+								    </div>
+								    <div class="container col-md-1">
+								      <a class="nav-link" href="/src/main/resources/templates/ReadMore/agriculture.html" th:href="@{/agriculture}">Agriculture</a>
+								    </div>
+								    <div class="container col-md-1">
+								      <a class="nav-link" href="/src/main/resources/templates/ReadMore/maths.html" th:href="@{/maths}">Maths</a>
+								    </div>
+								    <div class="container col-md-1">
+								      <a class="nav-link" href="/src/main/resources/templates/ReadMore/biology.html" th:href="@{/biology}">Biology</a>
+								    </div>
+								    <div class="container col-md-1 btn-group">
+								      <div class="dropdown">
+								        <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">More
+								          <span class="caret"></span></button>
+								        <ul class="dropdown-menu">
+								          <li><a class="dropdown-item" href="#">Science & Technology</a></li>
+								          <li><a class="dropdown-item" href="#">Arts & Culture</a></li>
+								          <li><a class="dropdown-item" href="#">Environment & Ecology</a></li>
+								          <li><a class="dropdown-item" href="#">Social Issues</a></li>
+								        </ul>
+								      </div>
+								    </div>
+								  </div>
+								</nav>
+							
+				
+        <!-- Introduction to Public Administration -->
+        <div class="admin-section" style="background-image: url(''); background-size: cover;">
+            <h2>लोक प्रशासन का परिचय</h2>
+            <img src="image/Public Administration/Public Administration.jpg" alt="लोक प्रशासन का परिचय">
+            <p>लोक प्रशासन सरकारी प्रशासन और नीति निर्माण की प्रक्रिया का अध्ययन करता है।</p>
+        </div>
+
+        <!-- Organizational Theory -->
+        <div class="admin-section" style="background-image: url(''); background-size: cover;">
+            <h2>संगठनात्मक सिद्धांत</h2>
+            <img src="image/Public Administration/Organizational Theories.jpg" alt="संगठनात्मक सिद्धांत">
+            <p>संगठनात्मक सिद्धांत सरकारी संगठनों की संरचना और कार्यप्रणाली को समझाता है।</p>
+            
+            <!-- Bureaucracy -->
+            <div class="sub-section">
+                <h3>ब्यूरोक्रेसी</h3>
+                <img src="image/Public Administration/Bureaucracy.jpg" alt="ब्यूरोक्रेसी">
+                <p>ब्यूरोक्रेसी सरकारी संस्थानों की जटिल संरचना और प्रशासनिक प्रक्रियाओं का अध्ययन है।</p>
+            </div>
+
+            <!-- Administrative Behavior -->
+            <div class="sub-section">
+                <h3>प्रशासनिक व्यवहार</h3>
+                <img src="image/Public Administration/Administrative Behavior.jpg" alt="प्रशासनिक व्यवहार">
+                <p>प्रशासनिक व्यवहार सरकारी कर्मचारियों के कार्य और उनके प्रभाव का अध्ययन करता है।</p>
+            </div>
+
+            <!-- Public Policy -->
+            <div class="sub-section">
+                <h3>लोक नीति</h3>
+                <img src="image/Public Administration/Public Policy.jpg" alt="लोक नीति">
+                <p>लोक नीति सरकार द्वारा अपनाई गई नीतियों और उनके प्रभावों का विश्लेषण करती है।</p>
+            </div>
+
+            <!-- Human Resource Management -->
+            <div class="sub-section">
+                <h3>मानव संसाधन प्रबंधन</h3>
+                <img src="image/Public Administration/HRM.jpg" alt="मानव संसाधन प्रबंधन">
+                <p>मानव संसाधन प्रबंधन सरकारी कर्मचारियों की भर्ती, प्रशिक्षण, और प्रबंधन से संबंधित है।</p>
+            </div>
+
+            <!-- Financial Management -->
+            <div class="sub-section">
+                <h3>वित्तीय प्रबंधन</h3>
+                <img src="image/Public Administration/Financial Management.jpg" alt="वित्तीय प्रबंधन">
+                <p>वित्तीय प्रबंधन सरकारी बजट और संसाधनों के प्रबंधन की प्रक्रिया को समझाता है।</p>
+            </div>
+        </div>
+
+        <!-- Public Administration and Governance -->
+        <div class="admin-section" style="background-image: url(''); background-size: cover;">
+            <h2>लोक प्रशासन और शासन</h2>
+            <img src="image/Public Administration/Public Administration and Governance.jpg" alt="लोक प्रशासन और शासन">
+            <p>लोक प्रशासन और शासन के सिद्धांत और प्रक्रियाओं का विश्लेषण करता है।</p>
+            
+            <!-- Governance Models -->
+            <div class="sub-section">
+                <h3>शासन मॉडल</h3>
+                <img src="image/Public Administration/Governance Model.jpg" alt="शासन मॉडल">
+                <p>शासन मॉडल विभिन्न प्रकार के शासन प्रणालियों और उनके प्रभावों को समझाते हैं।</p>
+            </div>
+
+            <!-- Policy Implementation -->
+            <div class="sub-section">
+                <h3>नीति कार्यान्वयन</h3>
+                <img src="image/Public Administration/Policy Implementation.jpg" alt="नीति कार्यान्वयन">
+                <p>नीति कार्यान्वयन में सरकारी नीतियों को लागू करने की प्रक्रिया का विश्लेषण होता है।</p>
+            </div>
+
+            <!-- Accountability and Transparency -->
+            <div class="sub-section">
+                <h3>जवाबदेही और पारदर्शिता</h3>
+                <img src="image/Public Administration/Accountability.jpg" alt="जवाबदेही और पारदर्शिता">
+                <p>जवाबदेही और पारदर्शिता सरकारी प्रक्रियाओं की जवाबदेही और पारदर्शिता को बढ़ावा देती हैं।</p>
+            </div>
+
+            <!-- Citizen Participation -->
+            <div class="sub-section">
+                <h3>नागरिक भागीदारी</h3>
+                <img src="image/Public Administration/Citizen Participation.jpg" alt="नागरिक भागीदारी">
+                <p>नागरिक भागीदारी नीति निर्माण और प्रशासनिक प्रक्रियाओं में जनता की भूमिका को दर्शाती है।</p>
+            </div>
+
+            <!-- Administrative Reforms -->
+            <div class="sub-section">
+                <h3>प्रशासनिक सुधार</h3>
+                <img src="image/Public Administration/Administrative Reform.jpg" alt="प्रशासनिक सुधार">
+                <p>प्रशासनिक सुधार सरकारी कार्यप्रणालियों में सुधार और प्रभावशीलता को बढ़ावा देते हैं।</p>
+            </div>
+        </div>
+
+        <!-- Comparative Public Administration -->
+        <div class="admin-section" style="background-image: url(''); background-size: cover;">
+            <h2>तुलनात्मक लोक प्रशासन</h2>
+            <img src="image/Public Administration/Comparative Public Administration.jpg" alt="तुलनात्मक लोक प्रशासन">
+            <p>तुलनात्मक लोक प्रशासन विभिन्न देशों के लोक प्रशासन प्रणालियों की तुलना करता है।</p>
+            
+            <!-- Administrative Systems -->
+            <div class="sub-section">
+                <h3>प्रशासनिक प्रणाली</h3>
+                <img src="image/Public Administration/Administrative System.jpg" alt="प्रशासनिक प्रणाली">
+                <p>प्रशासनिक प्रणाली विभिन्न देशों में सरकारी प्रशासन की संरचना और कार्यप्रणाली को समझाती हैं।</p>
+            </div>
+
+            <!-- Cross-National Comparisons -->
+            <div class="sub-section">
+                <h3>क्रॉस-नेशनल तुलना</h3>
+                <img src="image/Public Administration/Cross comparision.jpg" alt="क्रॉस-नेशनल तुलना">
+                <p>क्रॉस-नेशनल तुलना विभिन्न देशों के प्रशासनिक व्यवस्थाओं की तुलना करती है।</p>
+            </div>
+
+            <!-- Lessons from Global Experiences -->
+            <div class="sub-section">
+                <h3>वैश्विक अनुभवों से पाठ</h3>
+                <img src="image/Public Administration/Global Experiences.jpg" alt="वैश्विक अनुभवों से पाठ">
+                <p>वैश्विक अनुभवों से पाठ विभिन्न प्रशासनिक नीतियों और सुधारों के लाभ और चुनौतियों को दर्शाते हैं।</p>
+            </div>
+
+            <!-- Best Practices -->
+            <div class="sub-section">
+                <h3>सर्वोत्तम प्रथाएँ</h3>
+                <img src="image/Public Administration/Best Practices.jpg" alt="सर्वोत्तम प्रथाएँ">
+                <p>सर्वोत्तम प्रथाएँ प्रभावी लोक प्रशासन के लिए अपनाई गई सफल नीतियों और प्रक्रियाओं को प्रदर्शित करती हैं।</p>
+            </div>
+        </div>
+
+        <!-- Administrative Law -->
+        <div class="admin-section" style="background-image: url(''); background-size: cover;">
+            <h2>प्रशासनिक कानून</h2>
+            <img src="image/Public Administration/Administrative Law.jpg" alt="प्रशासनिक कानून">
+            <p>प्रशासनिक कानून सरकारी प्रशासन की कानूनी नींव और प्रक्रियाओं को समझाता है।</p>
+            
+            <!-- Legal Framework -->
+            <div class="sub-section">
+                <h3>कानूनी ढांचा</h3>
+                <img src="image/Public Administration/Legal Framework.jpg" alt="कानूनी ढांचा">
+                <p>कानूनी ढांचा प्रशासनिक निर्णयों और कार्रवाइयों की वैधता को निर्धारित करता है।</p>
+            </div>
+
+            <!-- Administrative Justice -->
+            <div class="sub-section">
+                <h3>प्रशासनिक न्याय</h3>
+                <img src="image/Public Administration/Administrative Justice.jpg" alt="प्रशासनिक न्याय">
+                <p>प्रशासनिक न्याय प्रशासनिक प्रक्रियाओं में न्याय और पारदर्शिता को सुनिश्चित करता है।</p>
+            </div>
+
+            <!-- Regulatory Framework -->
+            <div class="sub-section">
+                <h3>नियामक ढांचा</h3>
+                <img src="image/Public Administration/Regulatory Framework.jpg" alt="नियामक ढांचा">
+                <p>नियामक ढांचा सरकारी नियमों और विनियमों की व्यवस्था और कार्यान्वयन को निर्धारित करता है।</p>
+            </div>
+
+            <!-- Judicial Review -->
+            <div class="sub-section">
+                <h3>न्यायिक समीक्षा</h3>
+                <img src="image/Public Administration/Judicial Review.jpg" alt="न्यायिक समीक्षा">
+                <p>न्यायिक समीक्षा प्रशासनिक निर्णयों की कानूनी वैधता का परीक्षण करती है।</p>
+            </div>
+
+            <!-- Administrative Tribunals -->
+            <div class="sub-section">
+                <h3>प्रशासनिक न्यायाधिकरण</h3>
+                <img src="image/Public Administration/Tribunal.jpg" alt="प्रशासनिक न्यायाधिकरण">
+                <p>प्रशासनिक न्यायाधिकरण विशेष प्रशासनिक विवादों और मामलों के निपटारे के लिए होते हैं।</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

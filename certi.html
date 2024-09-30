@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Certification</title>
+    <link rel="stylesheet" href="styl.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <style>
+      .logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 5px;
+    mix-blend-mode: multiply;
+    p{
+        font-size: 25px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Course Certification</h1>
+    </header>
+    <section id="user-info">
+        <h2 style="text-align: center;">Enter Your Information</h2>
+        <form id="user-form" style="text-align: center;" >
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="button" onclick="startQuiz()">Start Quiz</button>
+        </form>
+    </section>
+    <section id="quiz" style="display: none;" >
+        <h2 style="text-align: center;">Quiz</h2>
+        <form id="quiz-form" class="mx-auto">
+             <!-- Question 1 -->
+        <!-- Question 1 -->
+<div class="question">
+    <p>1. Which tag is used to define an HTML document?</p>
+    <input type="radio" id="q1a1" name="q1" value="a">
+    <label for="q1a4">&lt;head&gt;</label><br>
+    <input type="radio" id="q1a2" name="q1" value="b">
+    <label for="q1a2">&lt;document&gt;</label><br>
+    <input type="radio" id="q1a3" name="q1" value="c">
+    <label for="q1a3">&lt;page&gt;</label><br>
+    <input type="radio" id="q1a4" name="q1" value="d">
+   <label for="q1a1">&lt;html&gt;</label><br>
+</div>
+
+<!-- Question 2 -->
+<div class="question">
+    <p>2. What does the <code>&lt;head&gt;</code> tag contain?</p>
+    <input type="radio" id="q2a1" name="q2" value="a">
+    <label for="q2a2">Main content of the page</label><br>
+    <input type="radio" id="q2a2" name="q2" value="b">
+    <label for="q2a1">Meta-information about the document</label><br>
+   
+    <input type="radio" id="q2a3" name="q2" value="c">
+    <label for="q2a3">Links to other documents</label><br>
+    <input type="radio" id="q2a4" name="q2" value="d">
+    <label for="q2a4">Interactive content</label><br>
+</div>
+
+<!-- Question 3 -->
+<div class="question">
+    <p>3. Which HTML5 tag is used for navigation links?</p>
+    <input type="radio" id="q3a1" name="q3" value="a">
+    <label for="q3a1">&lt;nav&gt;</label><br>
+    <input type="radio" id="q3a2" name="q3" value="b">
+    <label for="q3a2">&lt;link&gt;</label><br>
+    <input type="radio" id="q3a3" name="q3" value="c">
+    <label for="q3a3">&lt;menu&gt;</label><br>
+    <input type="radio" id="q3a4" name="q3" value="d">
+    <label for="q3a4">&lt;section&gt;</label><br>
+</div>
+
+<!-- Question 4 -->
+<div class="question">
+    <p>4. Which attribute is used to define the source of an image?</p>
+    <input type="radio" id="q4a1" name="q4" value="a">
+    <label for="q4a1">src</label><br>
+    <input type="radio" id="q4a2" name="q4" value="b">
+    <label for="q4a2">href</label><br>
+    <input type="radio" id="q4a3" name="q4" value="c">
+    <label for="q4a3">alt</label><br>
+    <input type="radio" id="q4a4" name="q4" value="d">
+    <label for="q4a4">title</label><br>
+</div>
+
+<!-- Question 5 -->
+<div class="question">
+    <p>5. How do you define a hyperlink in HTML?</p>
+    <input type="radio" id="q5a1" name="q5" value="a">
+    <label for="q5a3">&lt;url href="URL"&gt;</label><br>
+    <input type="radio" id="q5a2" name="q5" value="b">
+    <label for="q5a2">&lt;link href="URL"&gt;</label><br>
+    <input type="radio" id="q5a3" name="q5" value="c">
+    <label for="q5a1">&lt;a href="URL"&gt;</label><br>
+  
+    <input type="radio" id="q5a4" name="q5" value="d">
+    <label for="q5a4">&lt;href="URL"&gt;</label><br>
+</div>
+
+<!-- Question 6 -->
+<div class="question">
+    <p>6. What does the <code>&lt;form&gt;</code> tag do?</p>
+    <input type="radio" id="q6a1" name="q6" value="a">
+    <label for="q6a2">Creates a new section in the document</label><br>
+    <input type="radio" id="q6a2" name="q6" value="b">
+   
+    <label for="q6a1">Defines an HTML form for user input</label><br>
+    <input type="radio" id="q6a3" name="q6" value="c">
+    <label for="q6a3">Defines a hyperlink</label><br>
+    <input type="radio" id="q6a4" name="q6" value="d">
+    <label for="q6a4">Sets the title of the document</label><br>
+</div>
+
+<!-- Question 7 -->
+<div class="question">
+    <p>7. Which tag is used to include a JavaScript file in an HTML document?</p>
+    <input type="radio" id="q7a1" name="q7" value="a">
+    <label for="q7a1">&lt;script src="filename.js"&gt;</label><br>
+    <input type="radio" id="q7a2" name="q7" value="b">
+    <label for="q7a2">&lt;js src="filename.js"&gt;</label><br>
+    <input type="radio" id="q7a3" name="q7" value="c">
+    <label for="q7a3">&lt;javascript src="filename.js"&gt;</label><br>
+    <input type="radio" id="q7a4" name="q7" value="d">
+    <label for="q7a4">&lt;file src="filename.js"&gt;</label><br>
+</div>
+
+<!-- Question 8 -->
+<div class="question">
+    <p>8. How do you define a table row in HTML?</p>
+    <input type="radio" id="q8a1" name="q8" value="a">
+    <label for="q8a3">&lt;th&gt;</label><br>
+    <input type="radio" id="q8a2" name="q8" value="b">
+    <label for="q8a2">&lt;td&gt;</label><br>
+    <input type="radio" id="q8a3" name="q8" value="c">
+    <label for="q8a1">&lt;tr&gt;</label><br>
+
+    <input type="radio" id="q8a4" name="q8" value="d">
+    <label for="q8a4">&lt;row&gt;</label><br>
+</div>
+
+<!-- Question 9 -->
+<div class="question">
+    <p>9. Which tag is used to create a dropdown list in HTML?</p>
+    <input type="radio" id="q9a1" name="q9" value="a">
+    <label for="q9a1">&lt;select&gt;</label><br>
+    <input type="radio" id="q9a2" name="q9" value="b">
+    <label for="q9a2">&lt;list&gt;</label><br>
+    <input type="radio" id="q9a3" name="q9" value="c">
+    <label for="q9a3">&lt;dropdown&gt;</label><br>
+    <input type="radio" id="q9a4" name="q9" value="d">
+    <label for="q9a4">&lt;options&gt;</label><br>
+</div>
+
+<!-- Question 10 -->
+<div class="question">
+    <p>10. What is the purpose of the <code>&lt;meta&gt;</code> tag in HTML5?</p>
+    <input type="radio" id="q10a1" name="q10" value="a">
+    <label for="q10a4">Displays images</label><br>
+    <input type="radio" id="q10a2" name="q10" value="b">
+    <label for="q10a2">Defines a section of the document</label><br>
+    <input type="radio" id="q10a3" name="q10" value="c">
+    <label for="q10a3">Creates a navigation menu</label><br>
+    <input type="radio" id="q10a4" name="q10" value="d">
+ 
+    <label for="q10a1">Provides metadata about the HTML document</label><br>
+</div>
+
+<!-- Question 11 -->
+<div class="question">
+    <p>11. How do you define a section of a document in HTML5?</p>
+    <input type="radio" id="q11a1" name="q11" value="a">
+    <label for="q11a1">&lt;section&gt;</label><br>
+    <input type="radio" id="q11a2" name="q11" value="b">
+    <label for="q11a2">&lt;div&gt;</label><br>
+    <input type="radio" id="q11a3" name="q11" value="c">
+    <label for="q11a3">&lt;article&gt;</label><br>
+    <input type="radio" id="q11a4" name="q11" value="d">
+    <label for="q11a4">&lt;group&gt;</label><br>
+</div>
+
+<!-- Question 12 -->
+<div class="question">
+    <p>12. What is the correct HTML element for defining important text?</p>
+    <input type="radio" id="q12a1" name="q12" value="a">
+    <label for="q12a1">&lt;strong&gt;</label><br>
+    <input type="radio" id="q12a2" name="q12" value="b">
+    <label for="q12a2">&lt;b&gt;</label><br>
+    <input type="radio" id="q12a3" name="q12" value="c">
+    <label for="q12a3">&lt;important&gt;</label><br>
+    <input type="radio" id="q12a4" name="q12" value="d">
+    <label for="q12a4">&lt;em&gt;</label><br>
+</div>
+
+<!-- Question 13 -->
+<div class="question">
+    <p>13. Which tag is used to define a hyperlink that opens in a new tab?</p>
+    <input type="radio" id="q13a1" name="q13" value="a">
+    <label for="q13a3">&lt;a target="_parent"&gt;</label><br>
+    <input type="radio" id="q13a2" name="q13" value="b">
+    <label for="q13a2">&lt;a target="_self"&gt;</label><br>
+    <input type="radio" id="q13a3" name="q13" value="c">
+    <label for="q13a1">&lt;a target="_blank"&gt;</label><br>
+  
+    <input type="radio" id="q13a4" name="q13" value="d">
+    <label for="q13a4">&lt;a target="_top"&gt;</label><br>
+</div>
+
+<!-- Question 14 -->
+<div class="question">
+    <p>14. What attribute is used to specify the URL of a linked document?</p>
+    <input type="radio" id="q14a1" name="q14" value="a">
+    <label for="q14a2">src</label><br>
+    <input type="radio" id="q14a2" name="q14" value="b">
+    <label for="q14a1">href</label><br>
+
+    <input type="radio" id="q14a3" name="q14" value="c">
+    <label for="q14a3">alt</label><br>
+    <input type="radio" id="q14a4" name="q14" value="d">
+    <label for="q14a4">title</label><br>
+</div>
+
+<!-- Question 15 -->
+<div class="question">
+    <p>15. How do you add a comment in HTML?</p>
+    <input type="radio" id="q15a1" name="q15" value="a">
+    <label for="q15a4">&lt;note&gt;</label><br>
+    <input type="radio" id="q15a2" name="q15" value="b">
+    <label for="q15a2">&lt;comment&gt;</label><br>
+    <input type="radio" id="q15a3" name="q15" value="c">
+    <label for="q15a3">&lt;!-- Comment !--&gt;</label><br>
+    <input type="radio" id="q15a4" name="q15" value="d">
+   
+    <label for="q15a1">&lt;!-- Comment --&gt;</label><br>
+</div>
+
+<!-- Question 16 -->
+<div class="question">
+    <p>16. Which tag is used to define a table header?</p>
+    <input type="radio" id="q16a1" name="q16" value="a">
+    <label for="q16a1">&lt;th&gt;</label><br>
+    <input type="radio" id="q16a2" name="q16" value="b">
+    <label for="q16a2">&lt;td&gt;</label><br>
+    <input type="radio" id="q16a3" name="q16" value="c">
+    <label for="q16a3">&lt;tr&gt;</label><br>
+    <input type="radio" id="q16a4" name="q16" value="d">
+    <label for="q16a4">&lt;header&gt;</label><br>
+</div>
+
+<!-- Question 17 -->
+<div class="question">
+    <p>17. What is the correct HTML element for defining an article?</p>
+    <input type="radio" id="q17a1" name="q17" value="a">
+    <label for="q17a2">&lt;section&gt;</label><br>
+    <input type="radio" id="q17a2" name="q17" value="b">
+    <label for="q17a1">&lt;article&gt;</label><br>
+
+    <input type="radio" id="q17a3" name="q17" value="c">
+    <label for="q17a3">&lt;post&gt;</label><br>
+    <input type="radio" id="q17a4" name="q17" value="d">
+    <label for="q17a4">&lt;entry&gt;</label><br>
+</div>
+
+<!-- Question 18 -->
+<div class="question">
+    <p>18. Which tag is used for defining a definition list?</p>
+    <input type="radio" id="q18a1" name="q18" value="a">
+    <label for="q18a1">&lt;dl&gt;</label><br>
+    <input type="radio" id="q18a2" name="q18" value="b">
+    <label for="q18a2">&lt;list&gt;</label><br>
+    <input type="radio" id="q18a3" name="q18" value="c">
+    <label for="q18a3">&lt;def&gt;</label><br>
+    <input type="radio" id="q18a4" name="q18" value="d">
+    <label for="q18a4">&lt;description&gt;</label><br>
+</div>
+
+<!-- Question 19 -->
+<div class="question">
+    <p>19. How do you create a text area in HTML?</p>
+    <input type="radio" id="q19a1" name="q19" value="a">
+    <label for="q19a3">&lt;field&gt;</label><br>
+    <input type="radio" id="q19a2" name="q19" value="b">
+    <label for="q19a2">&lt;input type="text"&gt;</label><br>
+    <input type="radio" id="q19a3" name="q19" value="c">
+    <label for="q19a1">&lt;textarea&gt;</label><br>
+    
+    <input type="radio" id="q19a4" name="q19" value="d">
+    <label for="q19a4">&lt;textbox&gt;</label><br>
+</div>
+
+<!-- Question 20 -->
+<div class="question">
+    <p>20. Which HTML5 tag is used for embedding video content?</p>
+    <input type="radio" id="q20a1" name="q20" value="a">
+    <label for="q20a1">&lt;video&gt;</label><br>
+    <input type="radio" id="q20a2" name="q20" value="b">
+    <label for="q20a2">&lt;media&gt;</label><br>
+    <input type="radio" id="q20a3" name="q20" value="c">
+    <label for="q20a3">&lt;movie&gt;</label><br>
+    <input type="radio" id="q20a4" name="q20" value="d">
+    <label for="q20a4">&lt;embed&gt;</label><br>
+</div>
+
+            <!-- Add more questions here -->
+            <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+        </form>
+    </section>
+    <section id="certificate" style="display: none;">
+
+        <h2>Certificate</h2>
+        
+        <div id="certificate-template" class="certificate-template"  style="background-image:url('certificate.png.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="certificate-header">
+              <img src="logore.png" alt="Logo" class="logo">
+            </div>
+           
+        
+            <h2>Certificate of Completion</h2>
+            <p>This is to certify that</p>
+            <p id="cert-name" class="cert-name">[Name]</p>
+      
+            <p>has successfully completed the course</p>
+            <p>HTML5 for Beginners</p>
+            <p>on</p>
+            <img id="signature" src="sing.jpeg" style="width: 100px; margin-right: 500px; background: none;" alt="Signature">
+            <p id="cert-date" class="cert-date">[Date]</p>
+     
+
+        </div>
+    
+
+    </div>
+        <button id="download-certificate" onclick="downloadCertificate()">Download Certificate</button>
+    
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>

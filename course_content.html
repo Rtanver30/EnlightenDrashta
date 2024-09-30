@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Course</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #sidebar {
+            position: sticky;
+            top: 0;
+            height: 100vh; /* Full height */
+            overflow-y: auto; /* Enable scroll if needed */
+            background-color: #0056b3;
+            color: rgb(255, 255, 255);
+        }
+        #sidebar .nav-link {
+            color: black;
+        }
+        #sidebar .nav-link:hover {
+            background-color: #004094;
+        }
+        .progress-bar-text {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .border-bottom {
+            border-bottom: 2px solid #ddd;
+        }
+        .download-btn {
+            display: none; /* Hide button initially */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 bg-primary text-white vh-100">
+                <div class="sidebar-sticky pt-3">
+                    <h4 class="font-weight-bold">HTML Basics Course</h4>
+                    <p class="progress-bar-text" id="progressText">0% COMPLETE</p>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" id="progressBar" style="width: 0%"></div>
+                    </div>
+                    <hr>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#intro">Introduction to HTML</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#elements">HTML Elements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tags">HTML Tags</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#attributes">HTML Attributes</a>
+                        </li>
+                        <li class="nav-item font-weight-bold">Module 1: HTML Structure</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#basic-structure">Basic Structure of HTML</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#headings">HTML Headings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#paragraphs">HTML Paragraphs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hyperlinks">HTML Hyperlinks</a>
+                        </li>
+                        <li class="nav-item font-weight-bold">Module 2: Advanced HTML</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#images">HTML Images</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#forms">HTML Forms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tables">HTML Tables</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#semantic-elements">HTML Semantic-Elements </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#html5-apis">HTML APIs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#custom-data-attributes">HTML Custom Data Attributes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-enhancements">HTML Form Enhancements</a>
+                        </li>
+                        <!-- More items -->
+                    </ul>
+                
+                <button id="downloadCertificateBtn" class="btn btn-success"><a href="certi.html" th:href="@{/download}">Download Certificate</a></button>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+             
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                 <!-- Section: Introduction to HTML -->
+                 <div id="intro" class="pt-3 pb-2 mb-3 border-bottom">
+                    
+                    <h1>Introduction to HTML</h1>
+<p>HTML, which stands for HyperText Markup Language, is the foundational language used to create and design webpages. It provides the basic structure for web documents, allowing you to format text, create links, embed images, and organize content in a structured manner.</p>
+
+<h2>What is HTML?</h2>
+<p>HTML is a markup language that uses a system of tags to define elements within a document. These tags are enclosed in angle brackets and are used to format and display content on the web. HTML is essential for creating websites as it structures the content in a way that browsers can interpret and render.</p>
+
+<h2>Basic Structure of an HTML Document</h2>
+<p>An HTML document is structured with a series of elements. Here’s a basic example:</p>
+<pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+    &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+<h2>HTML Tags and Elements</h2>
+<p>HTML uses tags to create elements. Tags come in pairs: an opening tag and a closing tag. Here are some common tags:</p>
+<ul>
+  <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong>: Headings of different levels, where &lt;h1&gt; is the largest and &lt;h6&gt; is the smallest.</li>
+  <li><strong>&lt;p&gt;</strong>: Defines a paragraph.</li>
+  <li><strong>&lt;a&gt;</strong>: Defines a hyperlink. The <code>href</code> attribute specifies the link destination.</li>
+  <li><strong>&lt;img&gt;</strong>: Embeds an image. The <code>src</code> attribute specifies the image source, and <code>alt</code> provides alternative text.</li>
+  <li><strong>&lt;ul&gt;</strong> and <strong>&lt;ol&gt;</strong>: Define unordered (bulleted) and ordered (numbered) lists, respectively. List items are defined with <code>&lt;li&gt;</code> tags.</li>
+</ul>
+
+<h2>Attributes</h2>
+<p>HTML elements can have attributes that provide additional information about the element. Attributes are placed in the opening tag and come in name-value pairs. For example:</p>
+<pre>
+<code>
+&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+</code>
+</pre>
+<p>In this example, <code>href</code> specifies the URL of the link, and <code>target="_blank"</code> makes the link open in a new tab.</p>
+
+
+
+                </div>
+
+                <!-- Section: HTML Elements -->
+<div id="elements" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML Elements</h2>
+    <p>An HTML element is a fundamental building block of HTML documents. Each element consists of an opening tag, content, and a closing tag. The opening tag includes the element name enclosed in angle brackets, while the closing tag has a forward slash before the element name. Elements can also include attributes that provide additional information.</p>
+    
+    <h3>Basic Structure of an HTML Element</h3>
+    <p>Here is a breakdown of the basic structure of an HTML element:</p>
+    <pre>
+<code>
+&lt;tagname attribute="value"&gt;Content&lt;/tagname&gt;
+</code>
+    </pre>
+    <p>For example:</p>
+    <pre>
+<code>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+</code>
+    </pre>
+
+    <h3>Common HTML Elements</h3>
+    <p>Below are some commonly used HTML elements:</p>
+    <ul>
+        <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong>: These tags define headings of various levels. &lt;h1&gt; is the highest level (largest), while &lt;h6&gt; is the lowest level (smallest).</li>
+        <li><strong>&lt;p&gt;</strong>: Defines a paragraph. Text enclosed in this tag is displayed with space before and after the paragraph.</li>
+        <li><strong>&lt;a&gt;</strong>: Defines a hyperlink. The <code>href</code> attribute specifies the URL of the link. Example: <code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code></li>
+        <li><strong>&lt;img&gt;</strong>: Embeds an image. Requires the <code>src</code> attribute to specify the image source and <code>alt</code> attribute for alternative text. Example: <code>&lt;img src="image.jpg" alt="Description"&gt;</code></li>
+        <li><strong>&lt;ul&gt;</strong> and <strong>&lt;ol&gt;</strong>: Define unordered (bulleted) and ordered (numbered) lists, respectively. List items are defined with <code>&lt;li&gt;</code> tags.</li>
+        <li><strong>&lt;div&gt;</strong>: Defines a division or section in a document. It is a block-level container used for grouping and styling purposes.</li>
+        <li><strong>&lt;span&gt;</strong>: Defines a section of text or a container for inline elements. It is used for styling purposes and does not create a new block.</li>
+    </ul>
+    
+    <h3>Attributes</h3>
+    <p>Attributes provide additional information about an element and are included in the opening tag. They are specified as name-value pairs. For example:</p>
+    <pre>
+<code>
+&lt;a href="https://www.example.com" target="_blank" title="Visit Example"&gt;Visit Example&lt;/a&gt;
+</code>
+    </pre>
+    <p>In this example, <code>href</code> specifies the destination URL, <code>target="_blank"</code> opens the link in a new tab, and <code>title="Visit Example"</code> provides a tooltip text when the mouse hovers over the link.</p>
+    
+    <h3>Nesting Elements</h3>
+    <p>HTML elements can be nested within one another. Proper nesting ensures that elements are displayed correctly and that the document structure remains valid. For example:</p>
+    <pre>
+<code>
+&lt;div&gt;
+    &lt;h2&gt;Heading&lt;/h2&gt;
+    &lt;p&gt;This is a paragraph inside a div.&lt;/p&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+
+   
+</div>
+
+
+               <!-- Section: HTML Tags -->
+<div id="tags" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML Tags</h2>
+    <p>HTML tags are essential components of an HTML document. They are used to create and structure the content of a webpage. Tags are enclosed in angle brackets and usually come in pairs: an opening tag and a closing tag. The opening tag starts an element, while the closing tag ends it.</p>
+
+    <h3>Basic Structure of HTML Tags</h3>
+    <p>The basic syntax for HTML tags is as follows:</p>
+    <pre>
+<code>
+&lt;tagname&gt;Content&lt;/tagname&gt;
+</code>
+    </pre>
+    <p>For example:</p>
+    <pre>
+<code>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+</code>
+    </pre>
+
+    <h3>Opening and Closing Tags</h3>
+    <p>Most HTML elements require both an opening tag and a closing tag. The opening tag includes the element name in angle brackets, while the closing tag includes a forward slash before the element name. For example:</p>
+    <pre>
+<code>
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+</code>
+    </pre>
+    <p>Some tags, known as self-closing tags, do not have a closing tag. They are used for elements that do not have content between opening and closing tags. For example:</p>
+    <pre>
+<code>
+&lt;img src="image.jpg" alt="Description" /&gt;
+</code>
+    </pre>
+
+    <h3>Attributes</h3>
+    <p>Tags can include attributes that provide additional information about an element. Attributes are added to the opening tag and are specified in name-value pairs. For example:</p>
+    <pre>
+<code>
+&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+</code>
+    </pre>
+    <p>In this example, <code>href</code> is an attribute specifying the link destination, and <code>target="_blank"</code> is an attribute specifying that the link should open in a new tab.</p>
+
+    <h3>Common HTML Tags</h3>
+    <p>Here are some commonly used HTML tags:</p>
+    <ul>
+        <li><strong>&lt;html&gt;</strong>: The root element of an HTML document.</li>
+        <li><strong>&lt;head&gt;</strong>: Contains meta-information about the document, such as the title and links to stylesheets.</li>
+        <li><strong>&lt;body&gt;</strong>: Contains the content of the document, such as text, images, and links.</li>
+        <li><strong>&lt;title&gt;</strong>: Sets the title of the webpage, which appears in the browser's title bar or tab.</li>
+        <li><strong>&lt;div&gt;</strong>: Defines a division or section in the document, used for grouping and styling content.</li>
+        <li><strong>&lt;span&gt;</strong>: Defines a section of text or an inline container used for styling purposes.</li>
+        <li><strong>&lt;header&gt;</strong>: Represents introductory content or a group of introductory content.</li>
+        <li><strong>&lt;footer&gt;</strong>: Represents the footer of a section or page, often containing copyright and contact information.</li>
+        <li><strong>&lt;section&gt;</strong>: Represents a standalone section of content within a document.</li>
+        <li><strong>&lt;article&gt;</strong>: Represents a self-contained piece of content that could be distributed independently.</li>
+        <li><strong>&lt;aside&gt;</strong>: Represents content that is tangentially related to the content around it, such as a sidebar.</li>
+    </ul>
+
+    
+</div>
+
+
+              <!-- Section: HTML Attributes -->
+<div id="attributes" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML Attributes</h2>
+    <p>HTML attributes provide additional information about HTML elements and modify their behavior or appearance. They are specified in the opening tag of an element and typically consist of a name and a value.</p>
+    
+    <h3>Syntax of HTML Attributes</h3>
+    <p>Attributes are included in the opening tag of an element, and are written as name-value pairs. The name and value are separated by an equals sign, and the value is enclosed in double or single quotes. Here’s the basic syntax:</p>
+    <pre>
+<code>
+&lt;tagname attribute="value"&gt;Content&lt;/tagname&gt;
+</code>
+    </pre>
+    <p>For example:</p>
+    <pre>
+<code>
+&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+</code>
+    </pre>
+    <p>In this example, <code>href</code> is an attribute specifying the URL, and <code>target="_blank"</code> is an attribute specifying that the link should open in a new tab.</p>
+
+    <h3>Common HTML Attributes</h3>
+    <p>Here are some commonly used attributes:</p>
+    <ul>
+        <li><strong>href</strong>: Specifies the URL for a hyperlink. Used in the <code>&lt;a&gt;</code> tag.</li>
+        <li><strong>src</strong>: Specifies the URL of an image. Used in the <code>&lt;img&gt;</code> tag.</li>
+        <li><strong>alt</strong>: Provides alternative text for an image if it cannot be displayed. Used in the <code>&lt;img&gt;</code> tag.</li>
+        <li><strong>class</strong>: Assigns one or more class names to an element, allowing for CSS styling. Example: <code>class="container"</code></li>
+        <li><strong>id</strong>: Assigns a unique identifier to an element, often used for CSS styling or JavaScript manipulation. Example: <code>id="header"</code></li>
+        <li><strong>style</strong>: Allows inline CSS styling of an element. Example: <code>style="color: red;"</code></li>
+        <li><strong>target</strong>: Specifies where to open a linked document. Example: <code>target="_blank"</code> opens the link in a new tab.</li>
+        <li><strong>title</strong>: Provides additional information about an element, often shown as a tooltip when the user hovers over the element.</li>
+        <li><strong>name</strong>: Used in form elements to specify the name of the field. Example: <code>name="username"</code></li>
+        <li><strong>placeholder</strong>: Provides a hint or placeholder text within an input field. Example: <code>placeholder="Enter your name"</code></li>
+    </ul>
+
+    <h3>Case Sensitivity and Quotes</h3>
+    <p>Attribute names are case-insensitive, meaning <code>CLASS</code> and <code>class</code> are treated the same. However, attribute values should be enclosed in quotes (either single or double). Quotes are required if the value contains spaces or special characters. If the value does not contain spaces, quotes are optional but recommended for consistency.</p>
+
+    <h3>Examples of Attributes in Use</h3>
+    <p>Here are a few examples of how attributes are used within HTML elements:</p>
+    <pre>
+<code>
+&lt;img src="logo.png" alt="Company Logo" width="100" height="100"&gt;
+&lt;a href="https://www.example.com" target="_blank" title="Visit Example"&gt;Click Here&lt;/a&gt;
+&lt;input type="text" name="username" placeholder="Enter your username"&gt;
+</code>
+    </pre>
+
+   
+</div>
+
+               <!-- Section: Basic Structure of HTML -->
+<div id="basic-structure" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>Basic Structure of HTML</h2>
+    <p>Every HTML document follows a standard structure that ensures the document is correctly formatted and displayed by web browsers. This basic structure includes several key components: the document type declaration, and the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags.</p>
+
+    <h3>Document Type Declaration</h3>
+    <p>The document type declaration, or <!DOCTYPE>, is used to specify the version of HTML being used. It is placed at the very beginning of the document and helps browsers render the page correctly. For HTML5, the declaration is:</p>
+    <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+</code>
+    </pre>
+    <p>This declaration tells the browser that the document is an HTML5 document.</p>
+
+    <h3>&lt;html&gt; Element</h3>
+    <p>The <code>&lt;html&gt;</code> element is the root element of an HTML document. It encloses all the content on the page, except for the <!DOCTYPE> declaration.</p>
+    <pre>
+<code>
+&lt;html&gt;
+    <!-- Content goes here -->
+&lt;/html&gt;
+</code>
+    </pre>
+
+    <h3>&lt;head&gt; Element</h3>
+    <p>The <code>&lt;head&gt;</code> element contains meta-information about the document, such as its title, character set, and links to external resources like stylesheets and scripts. It does not display content directly on the webpage but is essential for defining document properties and including external resources.</p>
+    <pre>
+<code>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Title of the Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code>
+    </pre>
+
+    <h3>&lt;body&gt; Element</h3>
+    <p>The <code>&lt;body&gt;</code> element contains the actual content that will be displayed on the webpage, including text, images, links, and other elements. It is the visible part of the document where all user-facing content is placed.</p>
+    <pre>
+<code>
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+    &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+&lt;/body&gt;
+</code>
+    </pre>
+
+    <h3>Complete Example</h3>
+    <p>Here’s a complete example of a simple HTML document structure:</p>
+    <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Webpage&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+        &lt;p&gt;Welcome to my first HTML page.&lt;/p&gt;
+        &lt;a href="https://www.example.com"&gt;Learn more&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+
+   
+</div>
+
+
+              <!-- Section: HTML Headings -->
+<div id="headings" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML Headings</h2>
+    <p>Headings in HTML are used to define the title or main sections of a document. They help organize content and provide a hierarchical structure, making it easier for users and search engines to understand the document's layout. HTML offers six levels of headings, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, where <code>&lt;h1&gt;</code> is the highest (most important) level and <code>&lt;h6&gt;</code> is the lowest (least important) level.</p>
+    
+    <h3>Heading Levels</h3>
+    <p>Each heading level is defined using a different tag. Here’s a breakdown:</p>
+    <ul>
+        <li><strong>&lt;h1&gt;</strong>: Represents the main heading of the document. There should be only one <code>&lt;h1&gt;</code> per page to maintain semantic structure and SEO best practices.</li>
+        <li><strong>&lt;h2&gt;</strong>: Represents subheadings under the <code>&lt;h1&gt;</code> heading. Used for major sections or subsections.</li>
+        <li><strong>&lt;h3&gt;</strong>: Represents subheadings under the <code>&lt;h2&gt;</code> heading. Used for further subdivisions of content.</li>
+        <li><strong>&lt;h4&gt;</strong>: Represents subheadings under the <code>&lt;h3&gt;</code> heading.</li>
+        <li><strong>&lt;h5&gt;</strong>: Represents subheadings under the <code>&lt;h4&gt;</code> heading.</li>
+        <li><strong>&lt;h6&gt;</strong>: Represents the lowest level of heading.</li>
+    </ul>
+
+    <h3>Usage Examples</h3>
+    <p>Here are examples of how to use the different heading levels:</p>
+    <pre>
+<code>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading Level 1&lt;/h2&gt;
+&lt;h3&gt;Subheading Level 2&lt;/h3&gt;
+&lt;h4&gt;Subheading Level 3&lt;/h4&gt;
+&lt;h5&gt;Subheading Level 4&lt;/h5&gt;
+&lt;h6&gt;Subheading Level 5&lt;/h6&gt;
+</code>
+    </pre>
+    <p>These headings help to create a clear content hierarchy. For example:</p>
+    <pre>
+<code>
+&lt;h1&gt;Understanding HTML&lt;/h1&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;h3&gt;What is HTML?&lt;/h3&gt;
+&lt;h2&gt;HTML Elements&lt;/h2&gt;
+&lt;h3&gt;Basic Elements&lt;/h3&gt;
+&lt;h4&gt;Headings&lt;/h4&gt;
+&lt;h4&gt;Paragraphs&lt;/h4&gt;
+</code>
+    </pre>
+
+    <h3>SEO and Accessibility</h3>
+    <p>Proper use of headings improves SEO (Search Engine Optimization) by helping search engines understand the structure and relevance of your content. It also enhances accessibility for users with screen readers by providing a clear document outline. Always use headings in a logical order, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, without skipping levels to maintain a proper hierarchy.</p>
+
+    
+</div>
+<!-- Section: HTML Paragraphs -->
+<div id="paragraphs" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML Paragraphs</h2>
+    <p>Paragraphs in HTML are used to group sentences into distinct blocks of text, making content easier to read and organize. The <code>&lt;p&gt;</code> tag defines a paragraph and is one of the fundamental elements for structuring text content on a webpage.</p>
+
+    <h3>Syntax of Paragraphs</h3>
+    <p>The <code>&lt;p&gt;</code> tag is used to encapsulate a block of text. It automatically adds space above and below the paragraph, separating it from other elements. Here’s the basic syntax:</p>
+    <pre>
+<code>
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+</code>
+    </pre>
+    <p>Example:</p>
+    <pre>
+<code>
+&lt;p&gt;HTML (HyperText Markup Language) is the standard language used to create webpages. It structures the content on the web and is essential for building websites.&lt;/p&gt;
+</code>
+    </pre>
+
+    <h3>Multiple Paragraphs</h3>
+    <p>You can use multiple <code>&lt;p&gt;</code> tags to create separate paragraphs, each with its own block of text. The browser automatically inserts margins to space out paragraphs:</p>
+    <pre>
+<code>
+&lt;p&gt;This is the first paragraph.&lt;/p&gt;
+&lt;p&gt;This is the second paragraph, which follows the first one with a space in between.&lt;/p&gt;
+&lt;p&gt;Additional paragraphs will continue to be separated by space.&lt;/p&gt;
+</code>
+    </pre>
+
+    <h3>Paragraph Formatting</h3>
+    <p>The <code>&lt;p&gt;</code> tag is primarily for text content. To control the appearance of paragraphs, such as alignment, indentation, and spacing, you can use CSS (Cascading Style Sheets). For example:</p>
+    <pre>
+<code>
+&lt;style&gt;
+    p {
+        text-align: justify;
+        margin: 20px 0;
+        line-height: 1.6;
+    }
+&lt;/style&gt;
+</code>
+    </pre>
+    <p>In this CSS snippet:</p>
+    <ul>
+        <li><code>text-align: justify;</code> makes the text aligned evenly across the width of the paragraph.</li>
+        <li><code>margin: 20px 0;</code> adds 20 pixels of space above and below each paragraph.</li>
+        <li><code>line-height: 1.6;</code> increases the space between lines of text for better readability.</li>
+    </ul>
+
+    <h3>Empty Paragraphs</h3>
+    <p>Using empty <code>&lt;p&gt;</code> tags is not recommended as they create unnecessary spacing in the layout. For creating space, use CSS margin or padding properties instead:</p>
+    <pre>
+<code>
+&lt;p&gt;&lt;/p&gt; <!-- Avoid using empty paragraphs for spacing -->
+</code>
+    </pre>
+
+   
+</div>
+
+
+              <!-- Section: HTML Hyperlinks -->
+<div id="hyperlinks" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML Hyperlinks</h2>
+    <p>Hyperlinks, or links, are essential for navigating between webpages and resources on the web. They are defined using the <code>&lt;a&gt;</code> (anchor) tag. Hyperlinks can point to other webpages, files, email addresses, or locations within the same page.</p>
+    
+    <h3>Basic Syntax</h3>
+    <p>The <code>&lt;a&gt;</code> tag is used to create a hyperlink. The most important attribute of the <code>&lt;a&gt;</code> tag is <code>href</code>, which specifies the URL of the page or resource the link points to. The syntax is as follows:</p>
+    <pre>
+<code>
+&lt;a href="URL"&gt;Link Text&lt;/a&gt;
+</code>
+    </pre>
+    <p>Example:</p>
+    <pre>
+<code>
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+</code>
+    </pre>
+    <p>In this example, clicking the link text "Visit Example" will navigate to <a href="https://www.example.com">https://www.example.com</a>.</p>
+
+    <h3>Linking to Different Types of Resources</h3>
+    <ul>
+        <li><strong>External Links</strong>: Links to pages on other websites.</li>
+        <pre>
+<code>
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+</code>
+        </pre>
+        
+        <li><strong>Internal Links</strong>: Links to other pages within the same website.</li>
+        <pre>
+<code>
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+</code>
+        </pre>
+        
+        <li><strong>Email Links</strong>: Opens the default email client with a new message.</li>
+        <pre>
+<code>
+&lt;a href="mailto:example@example.com"&gt;Email Us&lt;/a&gt;
+</code>
+        </pre>
+        
+        <li><strong>File Downloads</strong>: Links to downloadable files.</li>
+        <pre>
+<code>
+&lt;a href="files/document.pdf"&gt;Download PDF&lt;/a&gt;
+</code>
+        </pre>
+        
+        <li><strong>Anchor Links</strong>: Links to specific locations within the same page. Use the <code>id</code> attribute to define anchor points.</li>
+        <pre>
+<code>
+&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;
+&lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;
+</code>
+        </pre>
+    </ul>
+
+    <h3>Additional Attributes</h3>
+    <p>In addition to <code>href</code>, the <code>&lt;a&gt;</code> tag can include several other attributes:</p>
+    <ul>
+        <li><strong>target</strong>: Specifies where to open the linked document. For example, <code>target="_blank"</code> opens the link in a new tab or window.</li>
+        <pre>
+<code>
+&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+</code>
+        </pre>
+        
+        <li><strong>title</strong>: Provides additional information about the link, often displayed as a tooltip when the user hovers over the link.</li>
+        <pre>
+<code>
+&lt;a href="https://www.example.com" title="Go to Example"&gt;Visit Example&lt;/a&gt;
+</code>
+        </pre>
+        
+        <li><strong>rel</strong>: Specifies the relationship between the current document and the linked document. For example, <code>rel="noopener noreferrer"</code> improves security when opening links in a new tab.</li>
+        <pre>
+<code>
+&lt;a href="https://www.example.com" rel="noopener noreferrer"&gt;Visit Example&lt;/a&gt;
+</code>
+        </pre>
+    </ul>
+
+    <h3>Styling Links</h3>
+    <p>CSS can be used to style links, including changing their color, removing underlines, and adding hover effects. For example:</p>
+    <pre>
+<code>
+&lt;style&gt;
+    a {
+        color: blue;
+        text-decoration: none;
+    }
+    a:hover {
+        color: red;
+        text-decoration: underline;
+    }
+&lt;/style&gt;
+</code>
+    </pre>
+    <p>In this CSS example:</p>
+    <ul>
+        <li><code>color: blue;</code> sets the link color to blue.</li>
+        <li><code>text-decoration: none;</code> removes the default underline from links.</li>
+        <li><code>a:hover { color: red; text-decoration: underline; }</code> changes the link color to red and adds an underline when the user hovers over the link.</li>
+    </ul>
+
+    
+</div>
+
+
+            <!-- Section: HTML Images -->
+<div id="images" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML Images</h2>
+    <p>Images are an integral part of web content, enhancing visual appeal and providing contextual information. In HTML, images are embedded using the <code>&lt;img&gt;</code> tag. This tag is self-closing and does not require a closing tag.</p>
+
+    <h3>Basic Syntax</h3>
+    <p>The <code>&lt;img&gt;</code> tag is used to display images. The essential attributes are:</p>
+    <ul>
+        <li><code>src</code>: Specifies the URL of the image file.</li>
+        <li><code>alt</code>: Provides alternative text that describes the image. This text is displayed if the image cannot be loaded and is used by screen readers for accessibility.</li>
+    </ul>
+    <p>Example:</p>
+    <pre>
+<code>
+&lt;img src="image.jpg" alt="A beautiful scenery"&gt;
+</code>
+    </pre>
+    <p>In this example, the image file <code>image.jpg</code> is displayed, and the alternative text "A beautiful scenery" describes the image for users who cannot see it.</p>
+
+    <h3>Additional Attributes</h3>
+    <p>Besides <code>src</code> and <code>alt</code>, the <code>&lt;img&gt;</code> tag supports several other attributes:</p>
+    <ul>
+        <li><strong>width</strong> and <strong>height</strong>: Define the dimensions of the image in pixels.</li>
+        <pre>
+<code>
+&lt;img src="image.jpg" alt="A beautiful scenery" width="600" height="400"&gt;
+</code>
+        </pre>
+        
+        <li><strong>title</strong>: Provides additional information about the image, often displayed as a tooltip when the user hovers over the image.</li>
+        <pre>
+<code>
+&lt;img src="image.jpg" alt="A beautiful scenery" title="Click to view in full size"&gt;
+</code>
+        </pre>
+        
+        <li><strong>loading</strong>: Controls when the image is loaded. The <code>loading="lazy"</code> attribute defers loading of the image until it is about to be scrolled into view, improving page load performance.</li>
+        <pre>
+<code>
+&lt;img src="image.jpg" alt="A beautiful scenery" loading="lazy"&gt;
+</code>
+        </pre>
+    </ul>
+
+    <h3>Image Formats</h3>
+    <p>Images can be in various formats, such as:</p>
+    <ul>
+        <li><strong>JPEG</strong> (or JPG): Suitable for photographs and images with many colors.</li>
+        <li><strong>PNG</strong>: Ideal for images with transparency and high-quality graphics.</li>
+        <li><strong>GIF</strong>: Supports animation and simple graphics with a limited color palette.</li>
+        <li><strong>SVG</strong>: Scalable vector graphics, useful for logos and icons as they can be resized without losing quality.</li>
+    </ul>
+
+    <h3>Responsive Images</h3>
+    <p>To make images responsive and adapt to different screen sizes, use the CSS <code>max-width</code> property:</p>
+    <pre>
+<code>
+&lt;style&gt;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+&lt;/style&gt;
+</code>
+    </pre>
+    <p>In this example, setting <code>max-width: 100%</code> ensures the image scales down to fit the container's width, and <code>height: auto;</code> maintains the image's aspect ratio.</p>
+
+   
+</div>
+
+
+              <!-- Section: HTML Forms -->
+<div id="forms" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML Forms</h2>
+    <p>Forms are a fundamental component of web applications, allowing users to submit data to a server for processing. HTML forms are created using the <code>&lt;form&gt;</code> tag, which acts as a container for various input elements like text fields, radio buttons, checkboxes, and more. Forms are essential for tasks such as user registration, login, and data collection.</p>
+
+    <h3>Basic Syntax</h3>
+    <p>The <code>&lt;form&gt;</code> tag encloses all the input elements. The most important attributes of the <code>&lt;form&gt;</code> tag are:</p>
+    <ul>
+        <li><strong>action</strong>: Specifies the URL where the form data should be sent for processing.</li>
+        <li><strong>method</strong>: Defines the HTTP method (GET or POST) used to send the form data. <code>GET</code> appends data to the URL, while <code>POST</code> sends data in the request body.</li>
+    </ul>
+    <p>Example:</p>
+    <pre>
+<code>
+&lt;form action="submit_form.php" method="post"&gt;
+    &lt;!-- Form elements go here --&gt;
+&lt;/form&gt;
+</code>
+    </pre>
+
+    <h3>Form Elements</h3>
+    <p>Forms can include various input elements:</p>
+    <ul>
+        <li><strong>Text Input</strong>: Allows users to enter text. Defined using the <code>&lt;input&gt;</code> tag with type <code>text</code>.</li>
+        <pre>
+<code>
+&lt;input type="text" name="username" placeholder="Enter your username"&gt;
+</code>
+        </pre>
+        
+        <li><strong>Password Input</strong>: Allows users to enter a password. Defined using the <code>&lt;input&gt;</code> tag with type <code>password</code>.</li>
+        <pre>
+<code>
+&lt;input type="password" name="password" placeholder="Enter your password"&gt;
+</code>
+        </pre>
+        
+        <li><strong>Textarea</strong>: Provides a multi-line text input area. Defined using the <code>&lt;textarea&gt;</code> tag.</li>
+        <pre>
+<code>
+&lt;textarea name="message" rows="4" cols="50"&gt;Enter your message here&lt;/textarea&gt;
+</code>
+        </pre>
+        
+        <li><strong>Radio Buttons</strong>: Allow users to select one option from a set. Defined using the <code>&lt;input&gt;</code> tag with type <code>radio</code>.</li>
+        <pre>
+<code>
+&lt;input type="radio" name="gender" value="male"&gt; Male&lt;br&gt;
+&lt;input type="radio" name="gender" value="female"&gt; Female
+</code>
+        </pre>
+        
+        <li><strong>Checkboxes</strong>: Allow users to select multiple options. Defined using the <code>&lt;input&gt;</code> tag with type <code>checkbox</code>.</li>
+        <pre>
+<code>
+&lt;input type="checkbox" name="subscribe" value="newsletter"&gt; Subscribe to newsletter
+</code>
+        </pre>
+        
+        <li><strong>Select Menu</strong>: Provides a dropdown list of options. Defined using the <code>&lt;select&gt;</code> tag with <code>&lt;option&gt;</code> tags.</li>
+        <pre>
+<code>
+&lt;select name="country"&gt;
+    &lt;option value="us"&gt;United States&lt;/option&gt;
+    &lt;option value="ca"&gt;Canada&lt;/option&gt;
+&lt;/select&gt;
+</code>
+        </pre>
+        
+        <li><strong>Buttons</strong>: Define buttons for form submission or other actions. Defined using the <code>&lt;button&gt;</code> tag or <code>&lt;input&gt;</code> tag with type <code>submit</code> or <code>reset</code>.</li>
+        <pre>
+<code>
+&lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;button type="reset"&gt;Reset&lt;/button&gt;
+</code>
+        </pre>
+    </ul>
+
+    <h3>Form Validation</h3>
+    <p>HTML5 introduced built-in form validation, allowing you to enforce rules for input fields. Common attributes include:</p>
+    <ul>
+        <li><strong>required</strong>: Makes a field mandatory.</li>
+        <pre>
+<code>
+&lt;input type="email" name="email" required&gt;
+</code>
+        </pre>
+        
+        <li><strong>pattern</strong>: Specifies a regular expression that the input must match.</li>
+        <pre>
+<code>
+&lt;input type="text" name="phone" pattern="[0-9]{10}" placeholder="Enter a 10-digit phone number"&gt;
+</code>
+        </pre>
+        
+        <li><strong>min</strong> and <strong>max</strong>: Define the minimum and maximum values for number inputs.</li>
+        <pre>
+<code>
+&lt;input type="number" name="age" min="18" max="99"&gt;
+</code>
+        </pre>
+        
+        <li><strong>maxlength</strong>: Limits the number of characters that can be entered.</li>
+        <pre>
+<code>
+&lt;input type="text" name="username" maxlength="15"&gt;
+</code>
+        </pre>
+    </ul>
+
+    <h3>Form Submission</h3>
+    <p>When the form is submitted, the data is sent to the server as specified by the <code>action</code> attribute. The <code>method</code> attribute determines how the data is sent:</p>
+    <ul>
+        <li><strong>GET</strong>: Appends form data to the URL as query parameters. Suitable for simple data retrieval.</li>
+        <li><strong>POST</strong>: Sends form data in the request body. More secure and suitable for sensitive or large amounts of data.</li>
+    </ul>
+
+    
+</div>
+
+
+             <!-- Section: HTML Tables -->
+<div id="tables" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML Tables</h2>
+    <p>Tables are used to organize and present data in a structured format with rows and columns. HTML tables are created using the <code>&lt;table&gt;</code> tag, with rows defined by the <code>&lt;tr&gt;</code> tag and cells defined by the <code>&lt;td&gt;</code> tag. Tables are useful for displaying tabular data, such as schedules, statistics, and other structured information.</p>
+
+    <h3>Basic Syntax</h3>
+    <p>The basic structure of an HTML table includes:</p>
+    <ul>
+        <li><code>&lt;table&gt;</code>: The container element for the table.</li>
+        <li><code>&lt;tr&gt;</code>: Defines a row in the table.</li>
+        <li><code>&lt;td&gt;</code>: Defines a cell (data) within a row.</li>
+        <li><code>&lt;th&gt;</code>: Defines a header cell in the table (optional but commonly used).</li>
+    </ul>
+    <p>Example:</p>
+    <pre>
+<code>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data 1&lt;/td&gt;
+        &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data 3&lt;/td&gt;
+        &lt;td&gt;Data 4&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <p>In this example, the table has two headers and two rows of data.</p>
+
+    <h3>Table Header</h3>
+    <p>Header cells are defined using the <code>&lt;th&gt;</code> tag. These cells are usually bold and centered by default.</p>
+    <pre>
+<code>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Alice&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Bob&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+
+    <h3>Table Attributes</h3>
+    <p>Several attributes can be applied to tables and their elements to enhance their presentation:</p>
+    <ul>
+        <li><strong>border</strong>: Specifies the width of the border around the table and cells. This is deprecated in HTML5 but can still be used for older browsers.</li>
+        <pre>
+<code>
+&lt;table border="1"&gt;
+    &lt;!-- Table content --&gt;
+&lt;/table&gt;
+</code>
+        </pre>
+        
+        <li><strong>cellspacing</strong>: Specifies the space between cells (deprecated in HTML5). Use CSS for spacing.</li>
+        <pre>
+<code>
+&lt;table cellspacing="5"&gt;
+    &lt;!-- Table content --&gt;
+&lt;/table&gt;
+</code>
+        </pre>
+        
+        <li><strong>cellpadding</strong>: Specifies the space between the cell content and its border (deprecated in HTML5). Use CSS for padding.</li>
+        <pre>
+<code>
+&lt;table cellpadding="10"&gt;
+    &lt;!-- Table content --&gt;
+&lt;/table&gt;
+</code>
+        </pre>
+    </ul>
+
+    <h3>Table Styles with CSS</h3>
+    <p>Use CSS to style tables for better appearance and readability:</p>
+    <pre>
+<code>
+&lt;style&gt;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+&lt;/style&gt;
+</code>
+    </pre>
+    <p>In this CSS example:</p>
+    <ul>
+        <li><code>border-collapse: collapse;</code> ensures that table borders are merged into a single border.</li>
+        <li><code>border: 1px solid black;</code> adds a solid border around table cells.</li>
+        <li><code>padding: 8px;</code> adds space inside cells.</li>
+        <li><code>background-color: #f2f2f2;</code> sets a background color for header cells.</li>
+    </ul>
+
+  
+</div>
+
+                <!-- Course sections -->
+                 <!-- Section: HTML5 Semantic Elements -->
+<div id="semantic-elements" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML5 Semantic Elements</h2>
+    <p>HTML5 introduced semantic elements that convey meaning about the structure of the document. These elements help with SEO and accessibility, making the content easier to understand for search engines and assistive technologies.</p>
+
+    <h3>Common Semantic Elements</h3>
+    <ul>
+        <li><code>&lt;header&gt;</code>: Represents the header of a section or page, typically containing introductory content or navigational aids.</li>
+        <pre>
+<code>
+&lt;header&gt;
+ &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+ &lt;nav&gt; ... &lt;/nav&gt;
+&lt;/header&gt;
+</code>
+        </pre>
+
+        <li><code>&lt;nav&gt;</code>: Defines a set of navigation links.</li>
+        <pre>
+<code>
+&lt;nav&gt;
+ &lt;ul&gt;
+     &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;
+</code>
+        </pre>
+
+        <li><code>&lt;article&gt;</code>: Represents a self-contained piece of content that could be distributed independently, such as a news article or blog post.</li>
+        <pre>
+<code>
+&lt;article&gt;
+ &lt;h2&gt;Article Title&lt;/h2&gt;
+ &lt;p&gt;Article content goes here...&lt;/p&gt;
+&lt;/article&gt;
+</code>
+        </pre>
+
+        <li><code>&lt;section&gt;</code>: Defines a section of content within a document, such as a chapter or thematic grouping of content.</li>
+        <pre>
+<code>
+&lt;section&gt;
+ &lt;h2&gt;Section Title&lt;/h2&gt;
+ &lt;p&gt;Section content goes here...&lt;/p&gt;
+&lt;/section&gt;
+</code>
+        </pre>
+
+        <li><code>&lt;footer&gt;</code>: Represents the footer of a section or page, usually containing copyright information or contact details.</li>
+        <pre>
+<code>
+&lt;footer&gt;
+ &lt;p&gt;&copy; 2024 My Website&lt;/p&gt;
+&lt;/footer&gt;
+</code>
+        </pre>
+
+        <li><code>&lt;aside&gt;</code>: Defines content that is tangentially related to the content around it, such as a sidebar or a call-out.</li>
+        <pre>
+<code>
+&lt;aside&gt;
+ &lt;p&gt;Related content or advertisements&lt;/p&gt;
+&lt;/aside&gt;
+</code>
+        </pre>
+
+        <li><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>: Used to mark up a photo, illustration, or diagram, along with a caption.</li>
+        <pre>
+<code>
+&lt;figure&gt;
+ &lt;img src="image.jpg" alt="Description"&gt;
+ &lt;figcaption&gt;Image caption goes here&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code>
+        </pre>
+    </ul>
+</div>
+<!-- Section: HTML5 APIs -->
+<div id="html5-apis" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>HTML5 APIs</h2>
+    <p>HTML5 introduced a variety of APIs that enable developers to create more interactive and dynamic web applications. Here are some key APIs:</p>
+
+    <h3>Geolocation API</h3>
+    <p>The Geolocation API allows web applications to access the geographical location of a user’s device.</p>
+    <pre>
+<code>
+if (navigator.geolocation) {
+ navigator.geolocation.getCurrentPosition(function(position) {
+     var lat = position.coords.latitude;
+     var lon = position.coords.longitude;
+     console.log('Latitude: ' + lat + ', Longitude: ' + lon);
+ });
+} else {
+ console.log('Geolocation is not supported by this browser.');
+}
+</code>
+    </pre>
+
+    <h3>Canvas API</h3>
+    <p>The Canvas API provides a way to draw graphics on a web page using JavaScript.</p>
+    <pre>
+<code>
+&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+<script>
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = 'red';
+ctx.fillRect(10, 10, 150, 80);
+</script>
+</code>
+    </pre>
+
+    <h3>Web Storage API</h3>
+    <p>The Web Storage API provides access to local storage and session storage.</p>
+    <pre>
+<code>
+localStorage.setItem('key', 'value');
+var value = localStorage.getItem('key');
+console.log(value); // Outputs: 'value'
+</code>
+    </pre>
+
+    <h3>WebSockets API</h3>
+    <p>The WebSockets API enables real-time, full-duplex communication between the client and server.</p>
+    <pre>
+<code>
+var socket = new WebSocket('ws://example.com/socketserver');
+socket.onopen = function() {
+ socket.send('Hello, server!');
+};
+socket.onmessage = function(event) {
+ console.log('Message from server: ' + event.data);
+};
+</code>
+    </pre>
+
+    <h3>Offline Web Applications</h3>
+    <p>HTML5 allows web applications to be cached and run offline using the Application Cache or Service Workers.</p>
+    <pre>
+<code>
+if ('serviceWorker' in navigator) {
+ navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+     console.log('Service Worker registered with scope:', registration.scope);
+ }).catch(function(error) {
+     console.log('Service Worker registration failed:', error);
+ });
+}
+</code>
+    </pre>
+
+   
+</div>
+<!-- Section: Custom Data Attributes -->
+<div id="custom-data-attributes" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>Custom Data Attributes</h2>
+    <p>Custom data attributes enable you to store extra information on HTML elements without using non-standard attributes. These attributes start with <code>data-</code> followed by a name of your choosing.</p>
+
+    <h3>Syntax</h3>
+    <p>Custom data attributes are written in the form <code>data-*="value"</code>, where <code>*</code> can be any string you choose.</p>
+    <pre>
+<code>
+&lt;div data-user-id="12345" data-role="admin"&gt;
+ User Information
+&lt;/div&gt;
+</code>
+    </pre>
+
+    <h3>Accessing Data Attributes</h3>
+    <p>You can access and manipulate data attributes using JavaScript:</p>
+    <pre>
+<code>
+var element = document.querySelector('div');
+var userId = element.getAttribute('data-user-id');
+var role = element.dataset.role;
+console.log('User ID:', userId); // Outputs: '12345'
+console.log('Role:', role); // Outputs: 'admin'
+</code>
+    </pre>
+
+    <h3>Use Cases</h3>
+    <p>Custom data attributes are useful for:</p>
+    <ul>
+        <li>Storing additional information for use in JavaScript.</li>
+        <li>Maintaining a clear separation between data and presentation.</li>
+        <li>Enhancing interactivity and dynamic behavior in web applications.</li>
+    </ul>
+
+ 
+</div>
+<!-- Section: Form Enhancements with HTML5 -->
+<div id="form-enhancements" class="pt-3 pb-2 mb-3 border-bottom">
+    <h2>Form Enhancements with HTML5</h2>
+    <p>HTML5 introduced several new input types and attributes to improve form functionality and user experience. These enhancements include better validation, improved user interfaces, and more specialized input fields.</p>
+
+    <h3>New Input Types</h3>
+    <ul>
+        <li><code>&lt;input type="email"&gt;</code>: Ensures the input is a valid email address.</li>
+        <pre>
+<code>
+&lt;form&gt;
+ &lt;label for="email"&gt;Email:&lt;/label&gt;
+ &lt;input type="email" id="email" name="email" required&gt;
+ &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code>
+        </pre>
+
+        <li><code>&lt;input type="tel"&gt;</code>: For entering telephone numbers.</li>
+        <pre>
+<code>
+&lt;form&gt;
+ &lt;label for="phone"&gt;Phone Number:&lt;/label&gt;
+ &lt;input type="tel" id="phone" name="phone"&gt;
+ &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code>
+        </pre>
+
+        <li><code>&lt;input type="date"&gt;</code>: Allows users to select a date from a calendar.</li>
+        <pre>
+<code>
+&lt;form&gt;
+ &lt;label for="date"&gt;Date:&lt;/label&gt;
+ &lt;input type="date" id="date" name="date"&gt;
+ &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code>
+        </pre>
+
+        <li><code>&lt;input type="range"&gt;</code>: Provides a slider for selecting a value.</li>
+        <pre>
+<code>
+&lt;form&gt;
+ &lt;label for="volume"&gt;Volume:&lt;/label&gt;
+ &lt;input type="range" id="volume" name="volume" min="0" max="100"&gt;
+ &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code>
+        </pre>
+    </ul>
+
+    <h3>Form Attributes</h3>
+    <ul>
+        <li><code>placeholder</code>: Provides a hint about what to enter in an input field.</li>
+        <pre>
+<code>
+&lt;input type="text" placeholder="Enter your name"&gt;
+</code>
+        </pre>
+
+        <li><code>required</code>: Specifies that the input field must be filled out before submitting the form.</li>
+        <pre>
+<code>
+&lt;input type="text" required&gt;
+</code>
+        </pre>
+
+        <li><code>pattern</code>: Specifies a regular expression that the input value must match.</li>
+        <pre>
+<code>
+&lt;input type="text" pattern="[A-Za-z]{3,}" title="Three or more letters"&gt;
+</code>
+        </pre>
+
+        <li><code>autocomplete</code>: Controls whether the browser should automatically complete the input field.</li>
+        <pre>
+<code>
+&lt;input type="text" autocomplete="on"&gt;
+</code>
+        </pre>
+    </ul>
+
+   
+</div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Progress bar and download button activation
+        window.addEventListener('scroll', function () {
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('progressText').textContent = Math.round(progress) + '% COMPLETE';
+            // Show download button when course is completed
+            if(progress >= 100) {
+                document.getElementById('downloadCertificate').style.display = 'block';
+            }
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('#sidebar .nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Certificate Generation Logic
+        document.getElementById('downloadCertificateBtn').addEventListener('click', function () {
+            const { jsPDF } = window.jspdf;
+
+            // Create a new PDF instance
+            const doc = new jsPDF();
+
+            // Add certificate content
+            doc.setFontSize(22);
+            doc.text("Certificate of Completion", 65, 40);
+
+            doc.setFontSize(16);
+            doc.text("This is to certify that", 80, 70);
+
+            doc.setFontSize(20);
+            doc.text("[User's Name]", 85, 90); // You can replace this with the actual user's name
+
+            doc.setFontSize(16);
+            doc.text("has successfully completed the", 70, 110);
+            doc.text("HTML Basics Course", 80, 130);
+
+            doc.setFontSize(14);
+            doc.text("Date of Completion: " + new Date().toLocaleDateString(), 65, 160);
+            doc.text("Instructor: [Instructor Name]", 75, 175); // Replace with actual instructor's name
+
+            // Add a border
+            doc.rect(10, 10, 190, 270);
+
+            // Save the PDF
+            doc.save("Certificate_of_Completion.pdf");
+        });
+    </script>
+</body>
+</html>

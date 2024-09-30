@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govt Job Preparation</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+	<div th:insert="header :: header"></div> <br>  
+    <div class="container mt-7">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/upsc.jpg" class="card-img-top" alt="UPSC Civil Services Preparation">
+                    <div class="card-body">
+                        <h5 class="card-title">UPSC Civil Services Preparation</h5>
+                        <p class="card-text">Comprehensive course for IAS aspirants covering GS, Essay, and Optional subjects.</p>
+                        <p class="card-text"><small class="text-muted">StudyIQ</small></p>
+                        <a href="upsc_explore.html" class="btn btn-primary"  th:href="@{UPSC_Civil_Services}">Explore</a>
+                        <a href="https://rzp.io/l/7G5wJqOp" class="btn btn-success">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/bank.jpg" class="card-img-top" alt="Banking Exams Preparation">
+                    <div class="card-body">
+                        <h5 class="card-title">Banking Exams Preparation</h5>
+                        <p class="card-text">Tailored course for IBPS, SBI PO, and Clerk exams with mock tests and study material.</p>
+                        <p class="card-text"><small class="text-muted">Oliveboard</small></p>
+                        <a href="bank_explore.html" class="btn btn-primary" th:href="@{Banking_Exams_Preparation}" >Explore</a>
+                        <a href="#" class="btn btn-success">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                <img src="img/R.png" class="card-img-top" alt="SSC CGL Preparation"  >
+                    <div class="card-body">
+                        <h5 class="card-title">SSC CGL Preparation</h5>
+                        <p class="card-text">Complete course with video lectures, notes, and practice tests for SSC CGL.</p>
+                        <p class="card-text"><small class="text-muted">Unacademy</small></p>
+                        <a href="ssc_explore.html" class="btn btn-primary" th:href="@{SSC_Exam_Preparation}">Explore</a>
+                        <a href="" class="btn btn-success">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/railways.jpg" class="card-img-top" alt="Railway Exams Preparation">
+                    <div class="card-body">
+                        <h5 class="card-title">Railway Exams Preparation</h5>
+                        <p class="card-text">Specialized course for RRB NTPC and Group D exams with practice sets.</p>
+                        <p class="card-text"><small class="text-muted">Testbook</small></p>
+                        <a href="rail_explore.html" class="btn btn-primary" th:href="@{Railways_Exam_Preparation}">Explore</a>
+                        <a href="#" class="btn btn-success">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/PCS-officer.jpg" class="card-img-top" alt="State PSC Exams Preparation">
+                    <div class="card-body">
+                        <h5 class="card-title">State PSC Exams Preparation</h5>
+                        <p class="card-text">In-depth course for various state PSC exams with current affairs and GS.</p>
+                        <p class="card-text"><small class="text-muted">Byju's</small></p>
+                        <a href="spcs_explore.html" class="btn btn-primary"  th:href="@{State_PCS_Exam_Preparation}">Explore</a>
+                        <a href="#" class="btn btn-success">Buy</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/defence.jpg" class="card-img-top" alt="Defense Exams Preparation">
+                    <div class="card-body">
+                        <h5 class="card-title">Defense Exams Preparation</h5>
+                        <p class="card-text">Prepare for NDA, CDS, and AFCAT with our expert guidance and materials.</p>
+                        <p class="card-text"><small class="text-muted">Adda247</small></p>
+                        <a href="defence_explore.html" class="btn btn-primary" th:href="@{Defence_Exam_Preparation}">Explore</a>
+                        <a href="#" class="btn btn-success">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

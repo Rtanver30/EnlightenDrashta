@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Header</title>
+
+<style>
+	.navbar-nav .nav-link.btn {
+	    margin-right: 15px;
+	}
+</style>
+</head>
+<body>
+	<header class="header_section">
+	    <div class="container-fluid">
+	        <div class="row">
+	            <div class="col-lg-0 p-0">
+	                <nav class="navbar navbar-expand-lg custom_nav-container bg-white navbar-light shadow sticky-top p-0">
+	                    <a class="navbar-brand nav-link" href="index.html" th:href="@{/index}">
+	                        <img src="/image/eLOGO.png" alt="eLOGO.png"  height="50px">
+	                        <span>
+	                            <span style="color: #0000FF;" th:href="@{/}">nlighten Drashta</span>
+	                        </span>
+	                    </a>
+	                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	                        <span class="navbar-toggler-icon"></span>
+	                    </button>
+	                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	                        
+	                        <ul class="navbar-nav ml-auto">
+	                            <li class="nav-item active">
+	                                <a class="nav-link" href="index.html" th:href="@{/}">Home </a>
+	                            </li>
+	                            <li class="nav-item">
+	                                <a href="/contact" th:href="@{/contact}" class="nav-link">Contact</a>
+	                            </li>
+	                           
+	                            <li class="nav-item">
+	                                <a href="Student.html" th:href="@{/Student}" class="nav-link">Success stories</a>
+	                            </li>
+	                            <li class="nav-item dropdown">
+	                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Read More</a>
+	                                <div class="dropdown-menu fade-down m-0">
+	                                    <a href="/ReadMore/history" th:href="@{/history}" style="color: #0000FF;"class="dropdown-item">History</a>
+	                                    <a href="/ReadMore/polity" th:href="@{/polity}" style="color: #0000FF;" class="dropdown-item">Polity</a>
+	                                    <a href="/src/main/resources/templates/ReadMore/economics.html" style="color: #0000FF;"  th:href="@{/economics}" class="dropdown-item">Economics</a>
+	                                    <a href="/src/main/resources/templates/ReadMore/hindi.html" style="color: #0000FF;"  th:href="@{/hindi}" class="dropdown-item">Hindi</a>
+	                                    <a href="/src/main/resources/templates/ReadMore/public administration.html" style="color: #0000FF;"  th:href="@{/public administration}" class="dropdown-item">Public administration</a>
+	                                    <a href="/src/main/resources/templates/ReadMore/chemistry.html" style="color: #0000FF;"  th:href="@{/chemistry}" class="dropdown-item">Chemistry</a>
+	                                    <a href="/src/main/resources/templates/ReadMore/chemistry.html" style="color: #0000FF;"  th:href="@{/physics}" class="dropdown-item">Physics</a>
+	                                    <a href="/src/main/resources/templates/ReadMore/maths.html" style="color: #0000FF;"  th:href="@{/maths}" class="dropdown-item">Maths</a>
+	                                    <a href="/src/main/resources/templates/ReadMore/biology.html" th:href="@{/biology}" style="color: #0000FF;"  class="dropdown-item">Biology</a>
+	                                    <a href="/src/main/resources/templates/ReadMore/agriculture.html" th:href="@{/agriculture}" style="color: #0000FF;"  class="dropdown-item">Agriculture</a>
+	                                </div>
+	                            </li>
+	                            <li class="nav-item dropdown">
+	                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Courses</a>
+	                                <div class="dropdown-menu fade-down m-0">
+	                                    <a href="/ReadMore/history" th:href="@{itimain}" style="color: #0000FF;" class="dropdown-item"> FREE </a>
+	                                    <a href="/src/main/resources/templates/IT_Topics/web_design.html" th:href="@{/GovtMain}" style="color: #0000FF;" class="dropdown-item"> PAID </a>
+	                                </div>
+	                            </li>
+	                        </ul>
+							
+						</div>
+					<!--	<div class="nav-item dropdown">
+						    <button class="nav-link dropdown-toggle " style="color: #0000FF;" data-toggle="dropdown">PAID & FREE</button>
+						    <div class="dropdown-menu fade-down m-0">
+						        <a href="/ReadMore/history" th:href="@{itimain}" style="color: #0000FF;" class="dropdown-item">PAID</a>
+						        <a href="/src/main/resources/templates/IT_Topics/web_design.html" th:href="@{web_design}" style="color: #0000FF;" class="dropdown-item">FREE</a>
+						    </div>
+						</div>-->
+
+						<ul class="navbar-nav mr-auto">
+							<a href="/login"  style="color: #0000FF;" class="nav-item nav-link logout-button"><i class="fa fa-user"></i></a>
+							 <div id="google_translate_element">
+							 </div>
+						  </ul>
+	                </nav>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+	
+	
+
+</body>
+</html>
